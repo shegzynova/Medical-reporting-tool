@@ -2,7 +2,18 @@
 
 Laravel web app
 
-User Credentials
+# INSTALLATION REQUIREMENT
+1.Clone the repo
+2.Create Database and Add it to env file
+3.Use php 7.4 or higher in your developement environment
+4.Run "composer install" in terminal
+5.Generate APP key
+6.Run "php artisan migrate" in terminal
+7.Seed database
+8.
+
+
+# User Credentials
 ADMIN
 Email: admin@admin.com
 Password: Admin2021@
@@ -17,5 +28,5 @@ Password: Admin2021@
 
 
 
-#Tests 
+# Tests 
 Test to check if Liverwire component exists
