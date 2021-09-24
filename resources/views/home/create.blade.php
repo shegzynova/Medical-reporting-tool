@@ -4,7 +4,7 @@
 
 
 
-
+{{-- Include livewire component --}}
 @livewire('create-user')
 
 

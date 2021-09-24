@@ -17,6 +17,8 @@ class UsersExport implements FromCollection, WithHeadings
         return User::all();
     }
 
+    //Asign header
+
     public function headings(): array
     {
         return [

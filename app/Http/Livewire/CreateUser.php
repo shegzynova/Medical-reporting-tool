@@ -15,6 +15,8 @@ class CreateUser extends Component
     public $propertyName;
     public $validatedData;
 
+
+    // Set Validation Rules
     protected $rules = [
         'first_name' => 'required',
         'last_name' => 'required',
@@ -23,11 +25,14 @@ class CreateUser extends Component
         'role' => 'required',
     ];
 
+    //Live updates for Validation
     public function updated($propertyName)
     {
         $this->validateOnly($propertyName);
     }
 
+
+    // Create the User
     public function addUser()
     {
         $validatedData = $this->validate();

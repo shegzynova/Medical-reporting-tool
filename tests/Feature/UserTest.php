@@ -8,7 +8,6 @@ use Tests\TestCase;
 use App\Models\User;
 use Livewire\Livewire;
 
-// use App\Models\Patient;
 
 class UserTest extends TestCase
 {
@@ -17,13 +16,13 @@ class UserTest extends TestCase
     {
         parent::setUp();
 
+        // The auth user we'll be using to test
         $this->user = User::factory()->create();
-        // $this->patients = Patient::factory()->create();
     }
 
 
     /**
-     * A basic test example.
+     * Test if user create page has a component
      *
      * @return void
      */
@@ -35,7 +34,7 @@ class UserTest extends TestCase
 
 
     /**
-     * A basic test example.
+     * Test if patient create page has a component.
      *
      * @return void
      */
@@ -46,7 +45,7 @@ class UserTest extends TestCase
     }
 
     /**
-     * A basic test example.
+     * Test if homepage has a component
      *
      * @return void
      */
@@ -57,7 +56,7 @@ class UserTest extends TestCase
     }
 
     /**
-     * A basic test example.
+     * Test if patients has a component
      *
      * @return void
      */
@@ -68,6 +67,9 @@ class UserTest extends TestCase
     }
 
 
+    /**
+     * Test login
+     */
     public function testLogin()
     {
         Livewire::test('login')
@@ -77,6 +79,9 @@ class UserTest extends TestCase
                     ->assertRedirect(route('homepage'));
     }
 
+    /**
+     * Test if login will fail
+     */
     public function testLoginFailed()
     {
         Livewire::test('login')
@@ -88,7 +93,7 @@ class UserTest extends TestCase
 
 
     /**
-     * A basic test example.
+     * Test Creation of Staff.
      *
      * @return void
      */
@@ -106,7 +111,7 @@ class UserTest extends TestCase
 
 
     /**
-     * A basic test example.
+     * Test if validation has errors
      *
      * @return void
      */

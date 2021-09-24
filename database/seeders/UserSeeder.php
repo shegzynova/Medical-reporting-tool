@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Hash;
 class UserSeeder extends Seeder
 {
     /**
-     * Run the database seeds.
+     * Run the database seed to create 100 users
      *
      * @return void
      */
@@ -20,6 +20,7 @@ class UserSeeder extends Seeder
             ->count(100)
             ->create();
 
+        //Seeding an admin user
         User::create([
             'first_name' => 'Michalis',
             'last_name' => 'Antoniou',
@@ -28,6 +29,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('Admin2021@'), // Admin2021@
         ]);
 
+        //Seeding a nurse user
         User::create([
             'first_name' => 'Ejhnhdui',
             'last_name' => 'Eisos',
@@ -36,6 +38,8 @@ class UserSeeder extends Seeder
             'password' => Hash::make('Admin2021@'), // Admin2021@
         ]);
 
+
+        //Seeding a doctor user
         User::create([
             'first_name' => 'Isjiji',
             'last_name' => 'Uisoj',

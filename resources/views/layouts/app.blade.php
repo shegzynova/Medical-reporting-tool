@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,16 +18,17 @@
 
     <!-- Scripts -->
     {{-- <script src="{{ asset(mix('js/app.js')) }}" defer data-turbolinks-track="reload"></script> --}}
-    <livewire:scripts/>
+    <livewire:scripts />
     @stack('scripts')
 
     <!-- Styles -->
     <link href="{{ asset('css/tailwind.css') }}" rel="stylesheet" data-turbolinks-track="reload">
-    <livewire:styles/>
+    <livewire:styles />
     @stack('styles')
 
     <!-- <script src="{{ asset('js/app.js') }}"></script> -->
 </head>
+
 <body>
     <style>
         .icon::after {
@@ -56,4 +58,5 @@
 
 
 </body>
+
 </html>

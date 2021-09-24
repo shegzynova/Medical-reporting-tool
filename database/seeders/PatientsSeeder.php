@@ -8,7 +8,7 @@ use Illuminate\Database\Seeder;
 class PatientsSeeder extends Seeder
 {
     /**
-     * Run the database seeds.
+     * Run the database seed to seed 1000 patients
      *
      * @return void
      */

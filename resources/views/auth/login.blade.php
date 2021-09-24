@@ -2,6 +2,9 @@
 
 @section('section')
 
-{{-- {{ dd($error) }} --}}
-@livewire('login')
+
+    {{-- Include livewire component --}}
+    @livewire('login')
+
+
 @endsection

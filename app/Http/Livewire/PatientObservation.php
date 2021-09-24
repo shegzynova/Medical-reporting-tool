@@ -35,6 +35,8 @@ class PatientObservation extends Component
 
 
 
+
+    // Add Observation to Patient
     public function addObservation(){
         $validatedData = $this->validate();
         $patient = Patient::findOrFail($this->patient_id);

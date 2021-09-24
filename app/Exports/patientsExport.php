@@ -20,6 +20,8 @@ class patientsExport implements FromCollection, WithHeadings
     }
 
 
+
+    // Asign Header to the sheet
     public function headings(): array
     {
         return [

@@ -11,6 +11,8 @@ class Login extends Component
 
     public $password;
 
+
+    // Validation
     protected $rules = [
         'email' => 'required|email',
         'password' => 'required|min:6',
@@ -21,6 +23,8 @@ class Login extends Component
         $this->validateOnly($propertyName);
     }
 
+
+    // Login
     public function loginUser()
     {
         $validatedData = $this->validate();
@@ -36,6 +40,8 @@ class Login extends Component
         }
     }
 
+
+    // View Page
     public function render()
     {
         return view('livewire.login');
