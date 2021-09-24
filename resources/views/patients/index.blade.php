@@ -8,8 +8,13 @@
         Add Patient
     </a>
 
-    <br><br>
+<br><br>
+
+
     @livewire('patients-table')
+
+
+
 </div>
 
 

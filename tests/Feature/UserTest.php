@@ -10,7 +10,7 @@ use App\Models\User;
 
 class UserTest extends TestCase
 {
-    use RefreshDatabase;
+    
 
     public function setUp() : void
     {

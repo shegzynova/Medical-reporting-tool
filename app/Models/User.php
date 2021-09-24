@@ -29,16 +29,11 @@ class User extends Authenticatable
         'remember_token',
     ];
 
-    
 
-
-    public function setPasswordAttribute($value){
-        $this->attributes['password'] = bcrypt($value);
-    }
 
     public function observation()
     {
-        return $this->belongsTo(Observation::class);
+        return $this->hasOne(Observation::class);
     }
 
 

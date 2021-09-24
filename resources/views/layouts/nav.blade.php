@@ -11,13 +11,14 @@
                 </div>
                 <!-- Primary Navbar items -->
                 <div class="hidden md:flex items-center space-x-1">
-                    <a href="/"  class="py-4 px-2 {{ (request()->is('/')) ? 'text-green-500 border-b-4 border-green-500' : 'font-semibold hover:text-green-500 transition duration-300' }}  font-semibold ">Home</a>
-                    <a href="/patients" class="py-4 px-2 text-gray-500 {{ (request()->is('patients')) ? 'text-green-500 border-b-4 border-green-500' : 'font-semibold hover:text-green-500 transition duration-300' }}">Patients</a>
+                    <a href="{{ route('homepage') }}"  class="py-4 px-2 {{ (request()->is('/')) ? 'text-green-500 border-b-4 border-green-500' : 'font-semibold hover:text-green-500 transition duration-300' }}  font-semibold ">Home</a>
+                    <a href="{{ route('patients') }}" class="py-4 px-2 text-gray-500 {{ (request()->is('patients')) ? 'text-green-500 border-b-4 border-green-500' : 'font-semibold hover:text-green-500 transition duration-300' }}">Patients</a>
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
                         @method('POST')
                         <button href="/logout" class="py-4 px-2 text-gray-500 font-semibold hover:text-red-500 transition duration-300">Logout</button>
                     </form>
+                    <p href="{{ route('patients') }}" class="py-4 right-60 absolute px-2 text-gray-500">{{ Auth::user()->first_name . ' '. Auth::user()->last_name }}</p>
                 </div>
             </div>
             <!-- Secondary Navbar items -->

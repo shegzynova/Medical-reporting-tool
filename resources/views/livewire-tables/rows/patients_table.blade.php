@@ -1,3 +1,5 @@
+
+
 <x-livewire-tables::table.cell>
 {{ $row->name }}
 </x-livewire-tables::table.cell>

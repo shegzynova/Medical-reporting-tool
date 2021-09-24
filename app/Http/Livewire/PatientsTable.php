@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Rappasoft\LaravelLivewireTables\DataTableComponent;
 use Rappasoft\LaravelLivewireTables\Views\Column;
 use App\Models\Patient;
+use Illuminate\Support\Facades\Auth;
 use Maatwebsite\Excel\Facades\Excel;
 
 class PatientsTable extends DataTableComponent
@@ -19,20 +20,25 @@ class PatientsTable extends DataTableComponent
 
     public function exportSelected()
     {
-        return Excel::download(new patientsExport, 'patients-collection.csv');
+        if(Auth::user()->role == 'admin'){
+            return Excel::download(new patientsExport, 'patients-collection.csv');
+        }else{
+            session()->flash('error', 'You are not allowed to export this.');
+            return back();
+        }
     }
 
 
     public function columns(): array
     {
         return [
-            Column::make('Patient\'s Name')
+            Column::make("Patient's Name", 'name')
                 ->sortable()
                 ->searchable(),
             Column::make('Age')
                 ->sortable()
                 ->searchable(),
-            Column::make('E-mail')
+            Column::make('E-mail', 'email')
                 ->sortable()
                 ->searchable(),
             Column::make('Phone')
@@ -43,6 +49,8 @@ class PatientsTable extends DataTableComponent
                 ->searchable(),
         ];
     }
+
+
 
     public function query(): Builder
     {

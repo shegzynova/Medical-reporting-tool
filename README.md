@@ -1,4 +1,4 @@
-# Circlelink-assessment-docs
+# Circlelink-assessment-doc.
 
 Laravel web app
 
@@ -7,7 +7,7 @@ Laravel web app
 
 2.Create Database and Add name to env file
 
-3.Use php 7.4 or higher in your developement environment
+3.Use php 7.4 or higher in your development environment PATH.
 
 4.Run "composer install" in terminal
 
@@ -17,7 +17,7 @@ Laravel web app
 
 7.Seed database
 
-8.
+8.Run "php artisan serve" to launch app.
 
 
 # User Credentials
