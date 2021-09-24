@@ -5,18 +5,18 @@ namespace App\Exports;
 use App\Models\Observation;
 use App\Models\Patient;
 use Maatwebsite\Excel\Concerns\FromCollection;
+use Maatwebsite\Excel\Concerns\WithHeadings;
 
-class patientsExport implements FromCollection
+class patientsExport implements FromCollection, WithHeadings
 {
     /**
     * @return \Illuminate\Support\Collection
     */
     public function collection()
     {
-        // $data = [
 
-        // ];
-        return Observation::with('user')->get();
+        return Observation::all();
+
     }
 
 
@@ -25,9 +25,8 @@ class patientsExport implements FromCollection
         return [
             '#',
             'Name',
-            'Age',
-            'E-Mail',
-            'Phone',
+            'Blood Group',
+            'Observation',
         ];
     }
 }

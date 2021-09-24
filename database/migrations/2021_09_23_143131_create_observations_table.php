@@ -15,7 +15,8 @@ class CreateObservationsTable extends Migration
     {
         Schema::create('observations', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('patient_id');
+            $table->string('name');
+            $table->string('blood_group');
             $table->longText('observation');
             $table->timestamps();
         });

@@ -31,10 +31,7 @@ class User extends Authenticatable
 
 
 
-    public function observation()
-    {
-        return $this->hasOne(Observation::class);
-    }
+    
 
 
 }

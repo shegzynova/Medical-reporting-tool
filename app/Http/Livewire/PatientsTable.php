@@ -20,11 +20,11 @@ class PatientsTable extends DataTableComponent
 
     public function exportSelected()
     {
-        if(Auth::user()->role == 'admin'){
+        if(Auth::user()->role != 'nurse'){
             return Excel::download(new patientsExport, 'patients-collection.csv');
         }else{
             session()->flash('error', 'You are not allowed to export this.');
-            return back();
+            return redirect(back());
         }
     }
 

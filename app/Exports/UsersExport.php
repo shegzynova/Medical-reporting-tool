@@ -23,15 +23,9 @@ class UsersExport implements FromCollection, WithHeadings
             '#',
             'First Name',
             'Last Name',
-            'E-Mail',
             'Role',
+            'E-Mail',
         ];
     }
 
-    public function map($users): array
-    {
-        return [
-            Date::dateTimeToExcel($users->created_at),
-        ];
-    }
 }

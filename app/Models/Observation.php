@@ -14,8 +14,7 @@ class Observation extends Model
 
     public function user()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(Patient::class, 'patient_id', 'id');
     }
-
 
 }

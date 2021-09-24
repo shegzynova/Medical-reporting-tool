@@ -60,5 +60,7 @@ class UserTable extends DataTableComponent
         return 'livewire-tables.rows.user_table';
     }
 
+  
+
 
 }

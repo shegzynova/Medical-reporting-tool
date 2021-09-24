@@ -37,8 +37,14 @@ class PatientObservation extends Component
 
     public function addObservation(){
         $validatedData = $this->validate();
+        $patient = Patient::findOrFail($this->patient_id);
+        $validatedData['name'] = $patient->name;
+        $validatedData['blood_group'] = $patient->blood_group;
+        unset($validatedData['patient_id']);
 
         Observation::create($validatedData);
+
+        session()->flash('success', 'Observation added for patient.');
 
         return redirect()->to('/patients');
     }

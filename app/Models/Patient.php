@@ -11,4 +11,9 @@ class Patient extends Model
 
     protected $guarded = [];
 
+    public function observation()
+    {
+        return $this->hasOne(Observation::class);
+    }
+
 }
