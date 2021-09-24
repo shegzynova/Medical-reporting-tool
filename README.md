@@ -38,4 +38,18 @@ Password: Admin2021@
 # Tests 
 Run "php artisan test"
 <br>
-Test to check if Liverwire component exists
+    user creation if component exists 
+
+  ✓ patient creation if component exists
+
+  ✓ homepage if component exists        
+
+  ✓ patients page if component exists   
+
+  ✓ login
+
+  ✓ login failed
+
+  ✓ staff creation
+  
+  ✓ if validation has errors  staff creation
